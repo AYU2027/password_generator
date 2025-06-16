@@ -1,0 +1,119 @@
+body {
+    transition: background 0.3s linear, color 0.3s linear;
+    margin-top: 10rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+
+body.dark {
+    background-color: #000000;
+    color: white;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    width: 50px;
+    height: 26px;
+    background-color: #111;
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.label i {
+    font-size: 12px;
+}
+
+.ball {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.label .ball {
+    transform: translateX(24px);
+}
+
+.fa-moon {
+    color: pink;
+}
+
+.fa-sun {
+    color: yellow;
+}
+
+.copy-btn {
+    cursor: pointer;
+}
+
+.custom-toggle-static {
+    position: relative;
+    z-index: 1000;
+}
+
+/* Dark Mode Styles */
+body.dark input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+body.dark button {
+    background-color: #00FF9F;
+    width: 170px;
+    border-radius: 0px;
+    border: #00FF9F;
+    color: black;
+}
+
+body.dark .form-check-input:checked {
+    background-color: #00FF9F;
+    border-color: #00FF9F;
+}
+
+body.dark input[type="range"]::-webkit-slider-runnable-track,
+body.dark input[type="range"]::-moz-range-track,
+body.dark input[type="range"]::-ms-track {
+    background: #444;
+    border-color: transparent;
+    color: transparent;
+}
+
+body.dark input[type="range"]::-webkit-slider-thumb,
+body.dark input[type="range"]::-moz-range-thumb,
+body.dark input[type="range"]::-ms-thumb {
+    background-color: #00FF9F;
+    border: none;
+}
+
+/* Default button style */
+button {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 0px;
+    width: 170px;
+}
+
+body:not(.dark) button {
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+}
+
+.code-heading {
+    font-family: 'Fira Code', monospace;
+}
